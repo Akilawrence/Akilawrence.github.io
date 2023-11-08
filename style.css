@@ -8,12 +8,13 @@ li {
   padding: 0;
 }
 body {
-  background-color: #f0f0f0; 
+  background-color: #3b2d2d; 
   background-image: url('images/coding\ background.jpg'); 
   background-size: cover; 
   background-repeat: no-repeat; 
   background-attachment: fixed; 
   font-family: Arial, sans-serif;
+  
 }
 
 body {
@@ -81,14 +82,39 @@ section {
   padding: 20px;
   color:#ebe4e4
 }
+section {
+  padding: 20px;
+  color: #ebe4e4;
+  animation: fadeIn 8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 h2 {
-  font-size: 24px;
+  font-size: 24px;section {
+  padding: 20px;
+  color: #ebe4e4;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
   margin-bottom: 10px;
   color: #ebe4e4;
-}
-#back-to-top-button:target {
-  display: none;
+
 }
 #back-to-top-button {
   position: fixed;
@@ -107,8 +133,11 @@ h2 {
 }
 
 
-#back-to-top-checkbox:checked + #back-to-top-button {
-  display: none;
+@media screen and (max-width: 600px) {
+  
+  body {
+    font-size: 14px;
+  }
 }
 footer {
   background-color: #b83030;
@@ -116,3 +145,4 @@ footer {
   text-align: center;
   padding: 10px;
 }
+  
