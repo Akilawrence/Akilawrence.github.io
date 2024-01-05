@@ -116,7 +116,6 @@ h2 {
   color: black;
   text-align: center;
 }
-
 #back-to-top-button {
   position: fixed;
   bottom: 20px;
@@ -128,16 +127,17 @@ h2 {
   font-size: 16px;
   background: linear-gradient(to right, #d54be4, #634f65);
   display: none;
+  z-index: 999; /* Set a higher z-index value */
 }
 
 #back-to-top-button:hover {
   background-color: #0a60d7;
 }
 
-
 body.scroll-up #back-to-top-button {
   display: block;
 }
+
 
 
 @media screen and (max-width: 600px) {
