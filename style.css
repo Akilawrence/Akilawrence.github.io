@@ -1,20 +1,14 @@
-
 body, h1, h2, p, ul, li {
   margin: 3px;
-  padding: 0;
+  padding: 3px;
+  color: black;
 }
 
 body {
-  background-color: #3b2d2d;
-  background-image: url('images/coding background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: Arial, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   cursor: pointer;
-  text-wrap: wrap;
+  word-wrap: wrap;
 }
-
 
 .rounded-image {
   border-radius: 150px;
@@ -24,12 +18,11 @@ body {
 }
 
 .rounded-image:hover {
-  transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
-
 header {
-  color: #fff;
+  color: #090909;
   text-align: center;
   padding: 20px;
 }
@@ -42,14 +35,14 @@ h1 {
 p {
   font-size: 18px;
   margin-bottom: 20px;
-  color: #ebe4e4;
+  color: black;
 }
-
 
 nav {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  background: linear-gradient(to right, #d54be4, #634f65);
 }
 
 nav ul {
@@ -59,49 +52,57 @@ nav ul {
 }
 
 nav li {
-  display: inline;
+  display: inline-block;
   margin: 0 10px;
 }
 
 nav a {
   text-decoration: none;
-  color: #ebe4e4;
+  color: black;
   font-weight: bold;
   transition: color 0.3s;
+  padding: 10px 20px;
+  display: block;
+  
 }
 
 nav a:hover {
-  color: #18b64a;
+  color: #fff;
   cursor: pointer;
 }
 
-
 section {
   padding: 20px;
-  color: #ebe4e4;
+  color: black;
 }
 
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  color: #ebe4e4;
-  justify-content: center;
+  color: black;
+  text-align: center;
 }
 
 #back-to-top-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  color: #fff;
+  color: black;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #18b64a; 
+  background: linear-gradient(to right, #d54be4, #634f65);
+  display: none; /* Hide the button initially */
 }
 
 #back-to-top-button:hover {
-  background-color: #137d38; 
+  background-color: #0a60d7;
+}
+
+/* Add this rule to show the button when the user scrolls down */
+body.scroll-up #back-to-top-button {
+  display: block;
 }
 
 
@@ -112,8 +113,8 @@ h2 {
 }
 
 footer {
-  background-color: #18b64a;
-  color: #ebe4e4;
+  background-color: #fff;
+  color: black;
   text-align: center;
   padding: 10px;
 }
@@ -121,43 +122,77 @@ footer {
 .projects {
   margin-top: 20px;
   display: flex;
-  overflow-x:auto;
-  
+  overflow-x: auto;
+  padding:10px;
 }
-
 
 .project-container {
   flex: 0 0 calc(30% - 20px);
-  margin-right: 60px;
-  padding-top: 34px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   padding: 15px;
   border: 2px solid #ccc;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+}
+
+.project-container h2 {
+  font-size: 24px;
+  margin-bottom: 90px;
+   
 }
 
 .project-container img {
-  width: 80%;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.project-container {
+  position: relative; /* Add relative positioning to the container */
+}
+
+.project-container h2 {
+  font-size: 24px;
+  margin-bottom: 90px;
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Align to the middle vertically */
+  left: 50%; /* Align to the middle horizontally */
+  transform: translate(-50%, -50%); /* Center the element */
+  z-index: 2; /* Ensure the h2 is above the image */
+}
+
+.project-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1; /* Ensure the image is behind the h2 */
+}
+
+.project-container img:hover {
+  transform: scale(1.1);
+}
 
 .project-container p {
   text-align: center;
   line-height: 1.3;
+  margin-bottom: 20px;
 }
 
-.project-container h2{
-  font-size: 55px;
-  margin-bottom: 20px;
-  
-  
+.projects h3 {
+  padding: 10px;
+  margin-right: 30px;
+  margin-bottom: 0px;
+  z-index: 3; /* Ensure the h3 is above the image and h2 */
 }
+
+
 .skills {
   display: flex;
   flex-direction: column;
@@ -174,7 +209,7 @@ footer {
 .skill-category h2 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #ebe4e4;
+  color: black;
 }
 
 .skills ul {
@@ -188,18 +223,6 @@ footer {
 .skills li {
   margin: 0 10px;
   font-size: 16px;
-  color: #ebe4e4;
+  color: black;
 }
 
-
-.project-container img {
-  width: 80%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.project-container img:hover {
-  transform: scale(1.1); 
-}

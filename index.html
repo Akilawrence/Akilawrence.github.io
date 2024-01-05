@@ -10,7 +10,8 @@
   <body>
     <nav>
       <ul>
-        
+        <button onclick="scrollToTop()" id="back-to-top-button" title="Go to top">&#8679; Top</button>
+
         <li><a href="#bio">Bio</a></li>
         <li><a href="#contact">Contact Me</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -101,12 +102,12 @@
         </article>
       </div>
     
-      <h3>The Parent App</h3>
+      <h3>The Parent Pal</h3>
       <div class="project-container">
         <img src="images/fotor-ai-202312271132.jpg" alt="Parents and baby" height="200" />
         <p>
           <strong>
-            The Parent App prototype introduces a revolutionary solution for monitoring and managing a child's sleep schedule. With a user-friendly interface, parents can input and save their child's sleep data, fostering seamless collaboration between co-parents by allowing the shared access of sleep schedules. What sets this app apart is its API integration, enabling users to access information about other children. By fetching data on various sleep patterns, habits, and recommendations, the app offers parents a broader perspective and valuable insights into their child's sleep behavior. Beyond mere data tracking, the app aims to create a supportive community by leveraging API capabilities to facilitate the exchange of advice and experiences among parents. The Parent App not only empowers individual parents with comprehensive sleep tracking but also fosters a collaborative and supportive network, enhancing the overall parenting experience.
+            The Parent Pal prototype introduces a revolutionary solution for monitoring and managing a child's sleep schedule. With a user-friendly interface, parents can input and save their child's sleep data, fostering seamless collaboration between co-parents by allowing the shared access of sleep schedules. What sets this app apart is its API integration, enabling users to access information about other children. By fetching data on various sleep patterns, habits, and recommendations, the app offers parents a broader perspective and valuable insights into their child's sleep behavior. Beyond mere data tracking, the app aims to create a supportive community by leveraging API capabilities to facilitate the exchange of advice and experiences among parents. The Parent App not only empowers individual parents with comprehensive sleep tracking but also fosters a collaborative and supportive network, enhancing the overall parenting experience.
           </strong>
         </p>
       </div>
@@ -160,12 +161,36 @@
                 width="20"
                 height="20"
               />
-              <a href="#top" id="back-to-top-button">Back to Top</a>
+            
             </a>
           </li>
         </ul>
       </nav>
     </section>
+    <script>
+      var mybutton = document.getElementById("back-to-top-button");
+    
+      
+      window.onscroll = function () {
+        scrollFunction();
+      };
+    
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+    
+
+      function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    
+    
     <footer>&copy; 2023 Aki Lawrence ||All Rights Reserved</footer>
   </body>
 </html>
