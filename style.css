@@ -4,22 +4,48 @@ body, h1, h2, p, ul, li {
   color: black;
 }
 
-body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  cursor: pointer;
-  word-wrap: wrap;
-}
+
 
 .rounded-image {
   border-radius: 150px;
   overflow: hidden;
   position: relative;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 2px solid #ccc; /* Border color */
+  background-color: #f0f0f0; /* Background color */
+  margin: 10px; /* Margin */
 }
 
 .rounded-image:hover {
   transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-color: #d54be4; /* Border color on hover */
 }
+
+.rounded-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rounded-image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Caption background color */
+  color: #fff; /* Caption text color */
+  padding: 8px 15px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.rounded-image:hover .rounded-image-caption {
+  opacity: 1;
+}
+
+
 body, h1, h2, h3, p, ul, li {
   margin: 3px;
   padding: 3px;
@@ -128,6 +154,21 @@ h2 {
   background: linear-gradient(to right, #d54be4, #634f65);
   display: none;
   z-index: 999; /* Set a higher z-index value */
+}
+body {
+  padding: 20px; /* Adjust padding as needed */
+  border: 2px solid #d54be4; /* Purple color */
+  border-radius: 8px;
+  background-color: #f9f9f9; /* Light gray background color */
+}
+
+
+body::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #d54be4; /* Purple color */
+  margin-top: 10px; /* Adjust the margin as needed */
 }
 
 #back-to-top-button:hover {
@@ -267,6 +308,16 @@ footer {
   align-items: center;
   text-align: center;
   font-weight: 600;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skills:hover {
+  border-color: #d54be4;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .skill-category {
@@ -291,5 +342,13 @@ footer {
   margin: 0 10px;
   font-size: 16px;
   color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
 }
 
+.skills li:hover {
+  background-color: #d54be4;
+  color: #fff;
+}
