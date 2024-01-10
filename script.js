@@ -11,13 +11,6 @@ const updateRotatePopup = () => {
     }
 };
 
+// Initial check and add event listener for resize
 updateRotatePopup();
-window.addEventListener('orientationchange', () => {
-    
-    updateRotatePopup();
-    
-    
-    if (rotatePopup.style.display === 'none') {
-        window.removeEventListener('orientationchange', updateRotatePopup);
-    }
-});
+window.addEventListener('resize', updateRotatePopup);
