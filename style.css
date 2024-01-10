@@ -352,3 +352,18 @@ footer {
   background-color: #d54be4;
   color: #fff;
 }
+
+.rotate-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f0f0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+}
+
