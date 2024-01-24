@@ -367,3 +367,6 @@ footer {
   z-index: 1000;
 }
 
+#contact img{
+border-radius: 5px;
+}
